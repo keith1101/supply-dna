@@ -3,398 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supply DNA – Futuristic Component Lineage Tracking</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+    <title>Supply DNA - Deep‑Tier Supply‑Chain Traceability</title>
 
-        /* Custom colors for Tailwind - updated for deeper futuristic feel */
-        :root {
-            --color-bg-darkest: hsl(210, 20%, 8%); /* Very dark, subtle blue tint */
-            --color-card-dark: hsl(210, 20%, 12%); /* Dark background for cards */
-            --color-text-primary: hsl(210, 40%, 95%); /* Light, almost white text */
-            --color-text-secondary: hsl(210, 20%, 65%); /* Subtler text */
-            --color-accent-blue: #64FFDA; /* Primary accent (Teal/Cyan) */
-            --color-red-danger: hsl(0, 70%, 60%); /* Red for problems */
-            --color-green-success: hsl(120, 70%, 60%); /* Green for benefits */
-        }
-        .bg-darkest { background-color: var(--color-bg-darkest); }
-        .bg-card-dark { background-color: var(--color-card-dark); }
-        .text-primary { color: var(--color-text-primary); }
-        .text-secondary { color: var(--color-text-secondary); }
-        .text-accent-blue { color: var(--color-accent-blue); }
-        .border-accent-blue { border-color: var(--color-accent-blue); }
-        .text-red-danger { color: var(--color-red-danger); }
-        .text-green-success { color: var(--color-green-success); }
+    <!-- Google Fonts: Oxanium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-        /* Custom scroll behavior for anchor links */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Subtle glow effect for cards */
-        .card-glow-effect {
-            box-shadow: 0 0px 0px rgba(0,0,0,0); /* Initial state */
-            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
-            border-color: transparent; /* Ensure border is initially transparent */
-        }
-        .card-glow-effect:hover {
-            box-shadow: 0 0px 15px rgba(100, 255, 218, 0.4), 0 0px 30px rgba(100, 255, 218, 0.1); /* Stronger soft glow on hover */
-            transform: translateY(-5px); /* Lift slightly */
-            border-color: var(--color-accent-blue); /* Subtle border highlight */
-        }
-
-        /* Text shadow for main headings */
-        .hero-text-shadow {
-            text-shadow: 0 0 12px var(--color-accent-blue), 0 0 25px rgba(100, 255, 218, 0.5);
-        }
-
-        /* Animation for subtle pulsing */
-        @keyframes pulse-slow {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
-        }
-        .animate-pulse-slow {
-            animation: pulse-slow 3s infinite ease-in-out;
-        }
-    </style>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-darkest text-primary">
+<body>
 
-    <!-- Header / Navigation -->
-    <header class="bg-card-dark shadow-lg fixed w-full z-20 backdrop-filter backdrop-blur-sm bg-opacity-80">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-4">
-                <!-- Glowing Placeholder Logo -->
-                <div class="text-accent-blue text-3xl font-extrabold hero-text-shadow">DNA</div>
-                <span class="text-primary text-xl font-semibold">Supply DNA</span>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="ph-bold ph-dna"></i>
+                <span>Supply DNA</span>
             </div>
-            <div class="hidden md:block">
-                <a href="#hero" class="text-secondary hover:text-accent-blue px-3 py-2 rounded-md text-base font-medium transition duration-300">Home</a>
-                <a href="#problem-solution" class="text-secondary hover:text-accent-blue px-3 py-2 rounded-md text-base font-medium transition duration-300">Problem & Solution</a>
-                <a href="#technologies" class="text-secondary hover:text-accent-blue px-3 py-2 rounded-md text-base font-medium transition duration-300">Technologies</a>
-                <a href="#how-it-works" class="text-secondary hover:text-accent-blue px-3 py-2 rounded-md text-base font-medium transition duration-300">How It Works</a>
-                <a href="#benefits" class="text-secondary hover:text-accent-blue px-3 py-2 rounded-md text-base font-medium transition duration-300">Benefits</a>
-                <a href="#resources" class="text-secondary hover:text-accent-blue px-3 py-2 rounded-md text-base font-medium transition duration-300">Resources</a>
-            </div>
-        </nav>
+            <nav class="main-nav">
+                <a href="#about">About</a>
+                <a href="#workflow">Workflow</a>
+                <a href="#tech">Tech</a>
+                <a href="#cta">Documents</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden pt-16 bg-gradient-to-br from-card-dark to-darkest">
-        <!-- More dynamic grid background with subtle animation potential -->
-        <div class="absolute inset-0 z-0 opacity-10">
-            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-                <defs>
-                    <pattern id="futuristic-grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                        <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="url(#gradient-line)" stroke-width="0.15"/>
-                    </pattern>
-                    <linearGradient id="gradient-line" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:var(--color-accent-blue);stop-opacity:0.2" />
-                        <stop offset="100%" style="stop-color:var(--color-text-secondary);stop-opacity:0.1" />
-                    </linearGradient>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#futuristic-grid)" />
-            </svg>
-        </div>
-        <div class="absolute inset-0 z-0 bg-gradient-to-t from-darkest via-transparent to-transparent opacity-50"></div>
+    <main>
+        <!-- HERO SECTION -->
+		<section class="hero" id="home">
+		  <!-- NEW: Transparent background image -->
+		  <img src="assets/bg-overlay.png" alt="" class="hero-bg-image" aria-hidden="true" />
+
+		  <div class="hero-bg"></div>
+		  <div class="container hero-content">
+			<h1 class="main-title">SUPPLY <span class="text-accent">DNA</span></h1>
+			<h2 class="subtitle">
+			  Forging Supply Chain Integrity with <br>
+			  <span id="animated-headline" class="text-accent">Transparency</span>
+			</h2>
+			<p class="hero-description">
+			  A blockchain and AIoT-powered solution for absolute, deep-tier traceability from raw material to finished product.
+			</p>
+			<a href="#about" class="btn btn-primary">Discover the Protocol</a>
+		  </div>
+		</section>
 
 
-        <div class="relative z-10 max-w-5xl mx-auto">
-            <!-- Enhanced Placeholder Logo -->
-            <div class="mb-6">
-                <svg class="mx-auto w-32 h-32 text-accent-blue hero-text-shadow animate-pulse-slow" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.31L18.6 7 12 9.69 5.4 7 12 4.31zM4 9l8 4 8-4v6l-8 4-8-4V9zm11.36 1.83L12 13.04l-3.36-1.21L6 14.16l6 2.16 6-2.16-3.36-1.21z"/>
-                </svg>
+        <!-- ABOUT SECTION -->
+        <section class="about-section" id="about">
+            <div class="container text-center">
+                <h2 class="section-title">What is Supply DNA?</h2>
+                <p class="section-subtitle">
+                    Supply DNA is a decentralized protocol designed to eliminate ambiguity and fraud in complex supply chains.
+                    By creating a unique, immutable digital identity for every component and product using AI‑enabled IoT devices,
+                    we record its entire journey on a secure blockchain. This transparent, tamper‑proof “digital twin” can be verified at any point,
+                    ensuring authenticity and compliance from the deepest tiers of your network.
+                </p>
             </div>
-            <h1 class="text-7xl md:text-8xl font-black text-primary mb-4 leading-tight hero-text-shadow tracking-tight">Supply DNA</h1>
-            <p class="text-3xl md:text-4xl text-text-secondary mb-10 font-light italic leading-snug">"Trace from the roots – Trust every component"</p>
-            <a href="/assets/SupplyDNA-Proposal.pdf" download class="inline-block bg-accent-blue text-darkest font-bold py-4 px-10 rounded-full shadow-xl hover:bg-primary hover:text-card-dark transition duration-300 transform hover:scale-105 border-2 border-accent-blue hover:border-primary">
-                Download Full Document
-            </a>
-        </div>
-    </section>
+        </section>
 
-    <!-- Problem & Solution Section -->
-    <section id="problem-solution" class="py-24 px-4 sm:px-6 lg:px-8 bg-darkest">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-5xl md:text-6xl font-bold text-primary text-center mb-16 hero-text-shadow tracking-wide">Problem & Solution</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                <!-- Problems -->
-                <div>
-                    <h3 class="text-4xl font-semibold text-red-danger mb-10 text-center md:text-left tracking-wide">Common Challenges</h3>
-                    <div class="space-y-10">
-                        <div class="flex items-start bg-card-dark p-8 rounded-xl shadow-lg card-glow-effect">
-                            <svg class="w-10 h-10 text-red-danger mr-6 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-                            <div>
-                                <h4 class="text-2xl font-semibold text-primary mb-2">Lack of Transparency</h4>
-                                <p class="text-text-secondary text-lg leading-relaxed">Fragmented data and opaque supply chains hinder end-to-end visibility.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start bg-card-dark p-8 rounded-xl shadow-lg card-glow-effect">
-                            <svg class="w-10 h-10 text-red-danger mr-6 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM12 8V5m0 2c-3.111 0-5.6 2.3-5.6 5.176l-.168 1.944a1.8 1.8 0 00-.31 1.05C5.83 17.5 7.726 19 10 19s4.17-1.5 4.078-3.76l-.168-1.944c-.092-2.876-2.589-5.176-5.7-5.176z"></path></svg>
-                            <div>
-                                <h4 class="text-2xl font-semibold text-primary mb-2">Counterfeit Components</h4>
-                                <p class="text-text-secondary text-lg leading-relaxed">Vulnerable to fraudulent parts, risking product integrity and brand reputation.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start bg-card-dark p-8 rounded-xl shadow-lg card-glow-effect">
-                            <svg class="w-10 h-10 text-red-danger mr-6 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 1.657-1.594 3-3.5 3S5 12.657 5 11V7c0-1.657 1.594-3 3.5-3s3.5 1.343 3.5 3v4zm7 4h1a2 2 0 002-2v-4a2 2 0 00-2-2h-1M5 19h1a2 2 0 002-2v-4a2 2 0 00-2-2H5c-1.657 0-3 1.343-3 3v4a2 2 0 002 2zm11-5a2 2 0 01-2 2h-1a2 2 0 01-2-2v-4a2 2 0 012-2h1a2 2 0 012 2v4z"></path></svg>
-                            <div>
-                                <h4 class="text-2xl font-semibold text-primary mb-2">Inefficient Recalls</h4>
-                                <p class="text-text-secondary text-lg leading-relaxed">Slow, costly, and broad-scope recalls due to poor component tracing.</p>
-                            </div>
+        <!-- HOW IT WORKS SECTION -->
+        <section class="workflow-section" id="workflow">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <div class="workflow-diagram">
+                    <!-- Step 1 -->
+                    <div class="workflow-step">
+                        <div class="workflow-icon"><i class="ph-bold ph-tag"></i></div>
+                        <div class="workflow-content">
+                            <h3>1. Digital Tagging</h3>
+                            <p>IoT sensors (NFC/QR) assign a unique digital ID to raw materials at the source.</p>
                         </div>
                     </div>
-                </div>
-
-                <!-- Solutions -->
-                <div>
-                    <h3 class="text-4xl font-semibold text-accent-blue mb-10 text-center md:text-left tracking-wide">Supply DNA's Solution</h3>
-                    <div class="space-y-10">
-                        <div class="flex items-start bg-card-dark p-8 rounded-xl shadow-lg card-glow-effect">
-                            <svg class="w-10 h-10 text-green-success mr-6 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.008 12.008 0 002 12c0 2.296.83 4.49 2.382 6.34A12.001 12.001 0 0012 21c4.478 0 8.268-2.94 9.57-7.06-.576-2.583-2.837-4.757-5.405-5.908z"></path></svg>
-                            <div>
-                                <h4 class="text-2xl font-semibold text-primary mb-2">End-to-End Visibility</h4>
-                                <p class="text-text-secondary text-lg leading-relaxed">Blockchain-powered immutable ledger for real-time, transparent tracking.</p>
-                            </div>
+                    <div class="workflow-connector"></div>
+                    <!-- Step 2 -->
+                    <div class="workflow-step">
+                        <div class="workflow-icon"><i class="ph-bold ph-cube"></i></div>
+                        <div class="workflow-content">
+                            <h3>2. Blockchain Entry</h3>
+                            <p>The ID and material data are hashed and recorded as the first block in its unique chain.</p>
                         </div>
-                        <div class="flex items-start bg-card-dark p-8 rounded-xl shadow-lg card-glow-effect">
-                            <svg class="w-10 h-10 text-green-success mr-6 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.008 12.008 0 002 12c0 2.296.83 4.49 2.382 6.34A12.001 12.001 0 0012 21c4.478 0 8.268-2.94 9.57-7.06-.576-2.583-2.837-4.757-5.405-5.908z"></path></svg>
-                            <div>
-                                <h4 class="text-2xl font-semibold text-primary mb-2">Authenticity Guaranteed</h4>
-                                <p class="text-text-secondary text-lg leading-relaxed">Securely verify component origins, preventing unauthorized substitutions.</p>
-                            </div>
+                    </div>
+                    <div class="workflow-connector"></div>
+                    <!-- Step 3 -->
+                    <div class="workflow-step">
+                        <div class="workflow-icon"><i class="ph-bold ph-robot"></i></div>
+                        <div class="workflow-content">
+                            <h3>3. AI‑Powered Scans</h3>
+                            <p>AI verifies data at each production stage. Every scan adds a new, immutable block.</p>
                         </div>
-                        <div class="flex items-start bg-card-dark p-8 rounded-xl shadow-lg card-glow-effect">
-                            <svg class="w-10 h-10 text-green-success mr-6 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.008 12.008 0 002 12c0 2.296.83 4.49 2.382 6.34A12.001 12.001 0 0012 21c4.478 0 8.268-2.94 9.57-7.06-.576-2.583-2.837-4.757-5.405-5.908z"></path></svg>
-                            <div>
-                                <h4 class="text-2xl font-semibold text-primary mb-2">Precision Recalls</h4>
-                                <p class="text-text-secondary text-lg leading-relaxed">Pinpoint affected units for surgical, cost-effective product recalls.</p>
-                            </div>
+                    </div>
+                    <div class="workflow-connector"></div>
+                    <!-- Step 4 -->
+                    <div class="workflow-step">
+                        <div class="workflow-icon"><i class="ph-bold ph-chart-line-up"></i></div>
+                        <div class="workflow-content">
+                            <h3>4. Real‑time Tracking</h3>
+                            <p>Stakeholders can access the complete, verified history of any item instantly.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Technologies Used Section -->
-    <section id="technologies" class="py-24 px-4 sm:px-6 lg:px-8 bg-darkest">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-5xl md:text-6xl font-bold text-primary text-center mb-16 hero-text-shadow tracking-wide">Core Technologies</h2>
+        <!-- KEY TECHNOLOGIES SECTION (single, cleaned) -->
+        <section class="tech-section" id="tech">
+            <div class="container">
+                <h2 class="section-title">Core Technologies</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                <!-- Blockchain -->
-                <div class="group relative flex flex-col items-center p-8 bg-card-dark rounded-xl shadow-lg card-glow-effect">
-                    <!-- Original content: icon, title, description -->
-                    <div class="transition-opacity duration-300 group-hover:opacity-0 flex flex-col items-center">
-                        <svg class="w-20 h-20 text-accent-blue mb-4 transition duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                        <h3 class="text-2xl font-semibold text-primary mb-2">Blockchain</h3>
-                        <p class="text-text-secondary text-center text-lg leading-relaxed">Immutable ledger for secure, transparent data.</p>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <i class="ph-bold ph-cube"></i>
+                        <h4>Blockchain</h4>
                     </div>
-                    <!-- Hover overlay -->
-                    <div class="absolute inset-0 flex items-center justify-center bg-card-dark rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-6">
-                        <p class="text-primary text-center font-medium text-xl leading-relaxed">Ensures data integrity and prevents tampering across the supply chain, providing an unalterable record.</p>
+                    <div class="tech-card">
+                        <i class="ph-bold ph-wifi-high"></i>
+                        <h4>Internet of Things (IoT)</h4>
                     </div>
-                </div>
-
-                <!-- AIoT Sensors -->
-                <div class="group relative flex flex-col items-center p-8 bg-card-dark rounded-xl shadow-lg card-glow-effect">
-                    <div class="transition-opacity duration-300 group-hover:opacity-0 flex flex-col items-center">
-                        <svg class="w-20 h-20 text-accent-blue mb-4 transition duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                        <h3 class="text-2xl font-semibold text-primary mb-2">AIoT Sensors</h3>
-                        <p class="text-text-secondary text-center text-lg leading-relaxed">Real-time environmental and location data capture.</p>
+                    <div class="tech-card">
+                        <i class="ph-bold ph-brain"></i>
+                        <h4>Artificial Intelligence</h4>
                     </div>
-                    <div class="absolute inset-0 flex items-center justify-center bg-card-dark rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-6">
-                        <p class="text-primary text-center font-medium text-xl leading-relaxed">Collects precise environmental data (temp, humidity, shock) and location during component transit and storage.</p>
+                    <div class="tech-card">
+                        <i class="ph-bold ph-qr-code"></i>
+                        <h4>QR & NFC</h4>
                     </div>
-                </div>
-
-                <!-- AI/ML -->
-                <div class="group relative flex flex-col items-center p-8 bg-card-dark rounded-xl shadow-lg card-glow-effect">
-                    <div class="transition-opacity duration-300 group-hover:opacity-0 flex flex-col items-center">
-                        <svg class="w-20 h-20 text-accent-blue mb-4 transition duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 10V7m5 3V7m5 3V7m5 3V7M3 14V9m5 5V9m5 5V9m5 5V9m-9 9V14m5 5V14"></path></svg>
-                        <h3 class="text-2xl font-semibold text-primary mb-2">AI/ML</h3>
-                        <p class="text-text-secondary text-center text-lg leading-relaxed">Data analysis, anomaly detection, and predictive insights.</p>
+                    <div class="tech-card">
+                        <i class="ph-bold ph-lock-key"></i>
+                        <h4>Cryptography</h4>
                     </div>
-                    <div class="absolute inset-0 flex items-center justify-center bg-card-dark rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-6">
-                        <p class="text-primary text-center font-medium text-xl leading-relaxed">Analyzes vast datasets to identify anomalies, predict potential failures, and optimize logistics.</p>
-                    </div>
-                </div>
-
-                <!-- QR/NFC Tagging -->
-                <div class="group relative flex flex-col items-center p-8 bg-card-dark rounded-xl shadow-lg card-glow-effect">
-                    <div class="transition-opacity duration-300 group-hover:opacity-0 flex flex-col items-center">
-                        <svg class="w-20 h-20 text-accent-blue mb-4 transition duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                        <h3 class="text-2xl font-semibold text-primary mb-2">QR/NFC Tagging</h3>
-                        <p class="text-text-secondary text-center text-lg leading-relaxed">Unique identifiers linking physical components to digital twins.</p>
-                    </div>
-                    <div class="absolute inset-0 flex items-center justify-center bg-card-dark rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-6">
-                        <p class="text-primary text-center font-medium text-xl leading-relaxed">Provides seamless, scannable links for immediate access to component lineage and data history.</p>
+                    <div class="tech-card">
+                        <i class="ph-bold ph-cloud-arrow-up"></i>
+                        <h4>Decentralized Storage</h4>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- How It Works – Simplified Workflow -->
-    <section id="how-it-works" class="py-24 px-4 sm:px-6 lg:px-8 bg-darkest">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-5xl md:text-6xl font-bold text-primary text-center mb-16 hero-text-shadow tracking-wide">The Supply DNA Workflow</h2>
-
-            <div class="relative flex flex-col items-center md:flex-row md:justify-between space-y-16 md:space-y-0 md:space-x-8">
-                <!-- Line connecting steps - now with a subtle gradient flow -->
-                <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent-blue to-transparent transform -translate-y-1/2 mx-20 z-0"></div>
-                <div class="md:hidden absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-accent-blue to-transparent transform -translate-x-1/2 my-20 z-0"></div>
-
-                <!-- Step 1 -->
-                <div class="relative z-10 flex flex-col items-center text-center p-6 bg-card-dark rounded-full shadow-xl w-48 h-48 justify-center card-glow-effect group">
-                    <div class="w-20 h-20 flex items-center justify-center rounded-full bg-accent-blue text-darkest text-4xl font-black mb-4 transition duration-300 group-hover:scale-110">1</div>
-                    <h3 class="text-xl font-semibold text-primary">Component Tagged</h3>
-                    <p class="text-text-secondary text-sm leading-tight">Unique ID for each part.</p>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="relative z-10 flex flex-col items-center text-center p-6 bg-card-dark rounded-full shadow-xl w-48 h-48 justify-center card-glow-effect group">
-                    <div class="w-20 h-20 flex items-center justify-center rounded-full bg-accent-blue text-darkest text-4xl font-black mb-4 transition duration-300 group-hover:scale-110">2</div>
-                    <h3 class="text-xl font-semibold text-primary">Sensor Data Recorded</h3>
-                    <p class="text-text-secondary text-sm leading-tight">Real-time environment data.</p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="relative z-10 flex flex-col items-center text-center p-6 bg-card-dark rounded-full shadow-xl w-48 h-48 justify-center card-glow-effect group">
-                    <div class="w-20 h-20 flex items-center justify-center rounded-full bg-accent-blue text-darkest text-4xl font-black mb-4 transition duration-300 group-hover:scale-110">3</div>
-                    <h3 class="text-xl font-semibold text-primary">Product Assembled</h3>
-                    <p class="text-text-secondary text-sm leading-tight">Component "DNA" is formed.</p>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="relative z-10 flex flex-col items-center text-center p-6 bg-card-dark rounded-full shadow-xl w-48 h-48 justify-center card-glow-effect group">
-                    <div class="w-20 h-20 flex items-center justify-center rounded-full bg-accent-blue text-darkest text-4xl font-black mb-4 transition duration-300 group-hover:scale-110">4</div>
-                    <h3 class="text-xl font-semibold text-primary">Data to Blockchain</h3>
-                    <p class="text-text-secondary text-sm leading-tight">Immutable ledger update.</p>
-                </div>
-
-                <!-- Step 5 -->
-                <div class="relative z-10 flex flex-col items-center text-center p-6 bg-card-dark rounded-full shadow-xl w-48 h-48 justify-center card-glow-effect group">
-                    <div class="w-20 h-20 flex items-center justify-center rounded-full bg-accent-blue text-darkest text-4xl font-black mb-4 transition duration-300 group-hover:scale-110">5</div>
-                    <h3 class="text-xl font-semibold text-primary">Product Scanned</h3>
-                    <p class="text-text-secondary text-sm leading-tight">Instant lineage retrieval.</p>
-                </div>
+        <!-- CALL TO ACTION -->
+        <section class="cta-section" id="cta">
+            <div class="container text-center">
+                 <h2 class="section-title">Ready to build the future?</h2>
+                 <p class="section-subtitle">
+                     Explore our technical documentation or view the pitch deck to see how Supply DNA can revolutionize your operations.
+                 </p>
+                 <div class="cta-buttons">
+                    <a href="#" target="_blank" class="btn btn-primary">View Pitch Deck <i class="ph-bold ph-arrow-right"></i></a>
+                    <a href="https://docs.google.com/document/d/1jRO2SqGTQyBxbrTv5fmR01j3Xs0rER4HHP_WKoogZLg/edit?tab=t.7ik94h5d800a#heading=h.alr4r47f867f" target="_blank" class="btn btn-secondary">Idea Proposal <i class="ph-bold ph-file-pdf"></i></a>
+                    <a href="#" target="_blank" class="btn btn-secondary">Technical Diagram <i class="ph-bold ph-git-fork"></i></a>
+                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="py-24 px-4 sm:px-6 lg:px-8 bg-darkest">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-5xl md:text-6xl font-bold text-primary text-center mb-16 hero-text-shadow tracking-wide">Transformative Benefits</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                <!-- Before Supply DNA -->
-                <div class="bg-card-dark p-10 rounded-xl shadow-lg card-glow-effect">
-                    <h3 class="text-4xl font-semibold text-red-danger mb-8 text-center md:text-left tracking-wide">Before Supply DNA</h3>
-                    <ul class="space-y-8 text-text-secondary text-xl">
-                        <li class="flex items-start">
-                            <svg class="w-8 h-8 text-red-danger mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <p><strong>Limited Visibility:</strong> Opaque and fragmented supply chains.</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-8 h-8 text-red-danger mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <p><strong>Counterfeit Risk:</strong> Vulnerability to fraudulent components.</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-8 h-8 text-red-danger mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <p><strong>Inefficient Recalls:</strong> Slow, broad, and costly product recalls.</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-8 h-8 text-red-danger mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <p><strong>ESG Compliance Burden:</strong> Difficulty in proving ethical sourcing.</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-8 h-8 text-red-danger mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <p><strong>Brand Reputation Risk:</strong> Damage from product failures or scandals.</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- After Supply DNA -->
-                <div class="bg-card-dark p-10 rounded-xl shadow-lg card-glow-effect">
-                    <h3 class="text-4xl font-semibold text-accent-blue mb-8 text-center md:text-left tracking-wide">After Supply DNA</h3>
-                    <ul class="space-y-8 text-primary text-xl">
-                        <li class="flex items-start">
-                            <svg class="w-8 h-8 text-green-success mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <p><strong>Full Traceability:</strong> Component-level, immutable, real-time tracking.</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-8 h-8 text-green-success mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <p><strong>Guaranteed Authenticity:</strong> Verified component origin and history.</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-8 h-8 text-green-success mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <p><strong>Surgical Recalls:</strong> Precision targeting reduces costs and impact.</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-8 h-8 text-green-success mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <p><strong>Simplified ESG:</strong> Transparent data for compliance and reporting.</p>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-8 h-8 text-green-success mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <p><strong>Enhanced Trust:</strong> Builds strong brand loyalty and confidence.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Document Links Section -->
-    <section id="resources" class="py-24 px-4 sm:px-6 lg:px-8 bg-darkest">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-5xl md:text-6xl font-bold text-primary mb-16 hero-text-shadow tracking-wide">Explore Resources</h2>
-
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-10">
-                <a href="/assets/SupplyDNA-Proposal.pdf" download class="inline-block bg-card-dark border-2 border-accent-blue text-accent-blue font-bold py-5 px-10 rounded-lg shadow-xl hover:bg-accent-blue hover:text-card-dark transition duration-300 transform hover:scale-105">
-                    Full Proposal PDF
-                </a>
-                <a href="/assets/SupplyDNA-Poster.png" download class="inline-block bg-card-dark border-2 border-accent-blue text-accent-blue font-bold py-5 px-10 rounded-lg shadow-xl hover:bg-accent-blue hover:text-card-dark transition duration-300 transform hover:scale-105">
-                    Project Poster (PNG)
-                </a>
-                <a href="https://github.com/your-repo/supply-dna" target="_blank" rel="noopener noreferrer" class="inline-block bg-card-dark border-2 border-accent-blue text-accent-blue font-bold py-5 px-10 rounded-lg shadow-xl hover:bg-accent-blue hover:text-card-dark transition duration-300 transform hover:scale-105">
-                    GitHub Repository
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-card-dark py-12 px-4 sm:px-6 lg:px-8 border-t border-card-dark">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0">
-            <div class="text-text-secondary text-lg">
-                <p>&copy; 2025 Supply DNA Project. All rights reserved.</p>
-                <p class="mt-2">Contact: John Doe (<a href="mailto:john.doe@example.com" class="text-accent-blue hover:underline">john.doe@example.com</a>)</p>
-                <p>Jane Smith (<a href="mailto:jane.smith@example.com" class="text-accent-blue hover:underline">jane.smith@example.com</a>)</p>
-                <p class="mt-6 font-semibold">A concept demo for the <span class="text-accent-blue">Blockchain Innovation Contest – 2025</span>.</p>
-            </div>
-            <!-- Animated Placeholder Team/Institution Logo -->
-            <div class="text-white text-3xl font-bold">
-                <svg class="mx-auto md:ml-auto w-20 h-20 text-accent-blue animate-pulse-slow" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.31L18.6 7 12 9.69 5.4 7 12 4.31zM4 9l8 4 8-4v6l-8 4-8-4V9zm11.36 1.83L12 13.04l-3.36-1.21L6 14.16l6 2.16 6-2.16-3.36-1.21z"/>
-                </svg>
-                <span class="block text-xl text-primary mt-2">Innovation Nexus</span>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2025 Supply DNA Protocol. Designed by [Your Name].</p>
+            <div class="social-links">
+                <a href="mailto:anhhuybui2006@gmail.com" title="Email"><i class="ph-bold ph-envelope-simple"></i></a>
+                <a href="#" target="_blank" title="GitHub"><i class="ph-bold ph-github-logo"></i></a>
+                <a href="#" target="_blank" title="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a>
             </div>
         </div>
     </footer>
 
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>

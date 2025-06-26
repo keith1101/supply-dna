@@ -1,0 +1,155 @@
+/*
+  SUPPLY DNA – Stylesheet
+  Theme: Tech‑Industrial, Sharp, Angular
+  Primary Font: Oxanium
+*/
+
+:root{
+    --bg-dark:#0D1117;
+    --bg-medium:#161B22;
+    --border-color:#30363d;
+    --text-primary:#c9d1d9;
+    --text-secondary:#8b949e;
+    --accent-primary:#22d3ee;
+    --accent-secondary:#0e7490;
+    --font-main:'Oxanium',sans-serif;
+    --danger-color:#f85149;
+    --success-color:#2ea043;
+}
+
+/* General Reset */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top:80px; /* offset fixed header */
+}
+
+body{
+    background-color:var(--bg-dark);
+    color:var(--text-primary);
+    font-family:var(--font-main);
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+.container{width:90%;max-width:1200px;margin:0 auto;}
+.text-center{text-align:center;}
+.text-accent{color:var(--accent-primary);}
+
+.section-title{
+    font-size:clamp(2rem,5vw,2.8rem);
+    font-weight:700;
+    margin-bottom:1rem;
+    position:relative;
+    padding-bottom:.5rem;
+    display:inline-block;
+}
+.section-title::after{
+    content:'';
+    position:absolute;bottom:0;left:50%;
+    transform:translateX(-50%);
+    width:60px;height:3px;
+    background:var(--accent-primary);
+    clip-path:polygon(10% 0,100% 0,90% 100%,0% 100%);
+}
+
+.section-subtitle{font-size:1.1rem;color:var(--text-secondary);max-width:700px;margin:0 auto 2rem;}
+
+.header{
+    position:fixed;top:0;left:0;z-index:1000;
+    width:100%;padding:1rem 0;
+    background:rgba(13,17,23,.8);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border-color);
+}
+.header-container{display:flex;justify-content:space-between;align-items:center;}
+.logo{display:flex;align-items:center;font-size:1.5rem;font-weight:700;color:var(--text-primary);}
+.logo i{color:var(--accent-primary);margin-right:.5rem;font-size:2rem;}
+.main-nav a{color:var(--text-primary);text-decoration:none;margin-left:2rem;font-weight:600;position:relative;padding-bottom:5px;}
+.main-nav a::after{
+    content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;
+    background:var(--accent-primary);transform:scaleX(0);transform-origin:right;
+    transition:transform .3s ease-out;
+}
+
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  z-index: -2;
+  opacity: 0.08; /* mờ nhẹ */
+  pointer-events: none;
+}
+
+
+.main-nav a:hover::after{transform:scaleX(1);transform-origin:left;}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;padding-top:80px;padding-bottom:80px;}
+.hero-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;
+    background-image:linear-gradient(rgba(13,17,23,0) 0%,var(--bg-dark) 95%),radial-gradient(circle at 50% 30%,rgba(34,211,238,.1),transparent 50%);
+}
+.main-title{font-size:clamp(3rem,10vw,6rem);font-weight:700;letter-spacing:2px;}
+.subtitle{font-size:clamp(1.2rem,3vw,1.8rem);font-weight:400;margin:1rem 0;color:var(--text-secondary);}
+#animated-headline{display:inline-block;transition:opacity .3s ease-in-out;}
+.hero-description{max-width:600px;margin:1.5rem auto 2.5rem;font-size:1.05rem;margin-bottom:2rem;}
+
+/* Buttons */
+.btn{display:inline-block;padding:.8rem 1.8rem;text-decoration:none;font-family:var(--font-main);font-weight:700;font-size:1rem;border:2px solid transparent;transition:.3s;clip-path:polygon(0% 15%,15% 0%,100% 0%,100% 85%,85% 100%,0% 100%);}
+.btn i{vertical-align:middle;margin-left:.5rem;}
+.btn-primary{background:var(--accent-primary);color:var(--bg-dark);border-color:var(--accent-primary);}
+.btn-primary:hover{background:var(--accent-secondary);border-color:var(--accent-secondary);transform:translateY(-3px);}
+.btn-secondary{background:transparent;color:var(--accent-primary);border-color:var(--accent-primary);}
+.btn-secondary:hover{background:var(--accent-primary);color:var(--bg-dark);transform:translateY(-3px);}
+
+/* Sections */
+.about-section,.workflow-section,.tech-section,.cta-section{padding:6rem 0;}
+.about-section{background:var(--bg-medium);}
+.tech-section{background:var(--bg-dark);scroll-margin-top:100px;}
+
+/* Workflow Diagram (simplified) */
+.workflow-diagram{display:flex;justify-content:space-between;align-items:flex-start;}
+.workflow-step{flex:1;text-align:center;padding:0 1rem;position:relative;}
+.workflow-icon{width:80px;height:80px;background:var(--bg-medium);border:2px solid var(--border-color);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:2.5rem;color:var(--accent-primary);transition:.3s;}
+.workflow-step:hover .workflow-icon{background:var(--accent-primary);color:var(--bg-dark);transform:scale(1.1);}
+.workflow-content h3{color:var(--text-primary);margin-bottom:.5rem;font-size:1.25rem;}
+.workflow-content p{color:var(--text-secondary);font-size:.95rem;}
+.workflow-connector{flex:1;height:2px;background:var(--border-color);margin-top:40px;}
+
+/* Tech Grid */
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:3rem;}
+.tech-card{background:var(--bg-medium);padding:2rem;border:1px solid var(--border-color);text-align:center;clip-path:polygon(0 15px,15px 0,100% 0,100% 100%,0 100%);transition:.3s;
+    opacity:0;transform:translateY(50px); /* initial hidden state */
+}
+.tech-card.in-view{/* fallback if JS disabled */opacity:1;transform:none;}
+.tech-card:hover{transform:translateY(-10px);border-color:var(--accent-primary);box-shadow:0 10px 30px rgba(34,211,238,.1);}
+.tech-card i{font-size:3rem;color:var(--accent-primary);margin-bottom:1rem;}
+.tech-card h4{font-size:1.1rem;font-weight:600;}
+
+/* CTA */
+.cta-section{background:linear-gradient(rgba(13,17,23,.9),rgba(13,17,23,.9)),url('/assets/bg-grid.svg') center/contain no-repeat;}
+.cta-buttons{margin-top:2rem;display:flex;justify-content:center;flex-wrap:wrap;gap:1.5rem;}
+
+/* Footer */
+.footer{padding:2rem 0;background:var(--bg-medium);border-top:1px solid var(--border-color);}
+.footer-container{display:flex;justify-content:space-between;align-items:center;}
+.social-links a{color:var(--text-secondary);text-decoration:none;font-size:1.5rem;margin-left:1rem;transition:.3s;}
+.social-links a:hover{color:var(--accent-primary);}
+
+/* Responsive */
+@media(max-width:992px){
+    .workflow-diagram{flex-direction:column;align-items:center;}
+    .workflow-step{margin-bottom:1rem;max-width:400px;}
+    .workflow-connector{width:2px;height:50px;margin:0 0 1rem;}
+}
+@media(max-width:768px){
+    html{scroll-padding-top:70px;}
+    .header{padding:.75rem 0;}
+    .main-nav{display:none;} /* simplified for mobile */
+    .footer-container{flex-direction:column;gap:1rem;}
+}
