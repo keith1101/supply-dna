@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply DNA – Component Lineage Tracking System</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-navy-blue text-light-gray">
+
+    <!-- Header / Navigation -->
+    <header class="bg-navy-blue shadow-lg fixed w-full z-10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <!-- Placeholder Logo -->
+                <div class="text-accent-blue text-2xl font-bold">DNA</div>
+                <span class="text-white text-xl font-semibold">Supply DNA</span>
+            </div>
+            <div class="hidden md:block">
+                <a href="#hero" class="text-dark-gray hover:text-accent-blue px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                <a href="#problem-solution" class="text-dark-gray hover:text-accent-blue px-3 py-2 rounded-md text-sm font-medium transition duration-300">Problem & Solution</a>
+                <a href="#technologies" class="text-dark-gray hover:text-accent-blue px-3 py-2 rounded-md text-sm font-medium transition duration-300">Technologies</a>
+                <a href="#how-it-works" class="text-dark-gray hover:text-accent-blue px-3 py-2 rounded-md text-sm font-medium transition duration-300">How It Works</a>
+                <a href="#benefits" class="text-dark-gray hover:text-accent-blue px-3 py-2 rounded-md text-sm font-medium transition duration-300">Benefits</a>
+                <a href="#resources" class="text-dark-gray hover:text-accent-blue px-3 py-2 rounded-md text-sm font-medium transition duration-300">Resources</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden pt-16">
+        <!-- Background elements for a techy look -->
+        <div class="absolute inset-0 z-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="currentColor" stroke-width="0.2" class="text-light-gray opacity-20"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <!-- Placeholder Logo in Hero -->
+            <div class="mb-4">
+                <svg class="mx-auto w-24 h-24 text-accent-blue" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.31L18.6 7 12 9.69 5.4 7 12 4.31zM4 9l8 4 8-4v6l-8 4-8-4V9zm11.36 1.83L12 13.04l-3.36-1.21L6 14.16l6 2.16 6-2.16-3.36-1.21z"/>
+                </svg>
+            </div>
+            <h1 class="text-6xl font-bold text-white mb-4 leading-tight">Supply DNA</h1>
+            <p class="text-3xl text-dark-gray mb-8">"Trace from the roots – Trust every component"</p>
+            <a href="/assets/SupplyDNA-Proposal.pdf" download class="inline-block bg-accent-blue text-navy-blue font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-white transition duration-300 transform hover:scale-105">
+                Download Full Document
+            </a>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section id="problem-solution" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-bold text-white text-center mb-16">Problem & Solution</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Problems -->
+                <div>
+                    <h3 class="text-4xl font-semibold text-white mb-8 text-center md:text-left">Common Problems</h3>
+                    <div class="space-y-8">
+                        <div class="flex items-start bg-navy-blue p-6 rounded-lg shadow-lg">
+                            <svg class="w-8 h-8 text-red-500 mr-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white mb-2">Lack of Transparency</h4>
+                                <p class="text-dark-gray">Difficult to track components across multi-tier supply chains, leading to blind spots.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-navy-blue p-6 rounded-lg shadow-lg">
+                            <svg class="w-8 h-8 text-red-500 mr-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM12 8V5m0 2c-3.111 0-5.6 2.3-5.6 5.176l-.168 1.944a1.8 1.8 0 00-.31 1.05C5.83 17.5 7.726 19 10 19s4.17-1.5 4.078-3.76l-.168-1.944c-.092-2.876-2.589-5.176-5.7-5.176z"></path></svg>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white mb-2">Counterfeit Components</h4>
+                                <p class="text-dark-gray">Risk of fraudulent or sub-standard components entering the supply chain.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-navy-blue p-6 rounded-lg shadow-lg">
+                            <svg class="w-8 h-8 text-red-500 mr-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 1.657-1.594 3-3.5 3S5 12.657 5 11V7c0-1.657 1.594-3 3.5-3s3.5 1.343 3.5 3v4zm7 4h1a2 2 0 002-2v-4a2 2 0 00-2-2h-1M5 19h1a2 2 0 002-2v-4a2 2 0 00-2-2H5c-1.657 0-3 1.343-3 3v4a2 2 0 002 2zm11-5a2 2 0 01-2 2h-1a2 2 0 01-2-2v-4a2 2 0 012-2h1a2 2 0 012 2v4z"></path></svg>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white mb-2">Inefficient Recalls</h4>
+                                <p class="text-dark-gray">Slow and costly product recalls due to lack of precise component lineage.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solutions -->
+                <div>
+                    <h3 class="text-4xl font-semibold text-white mb-8 text-center md:text-left">Supply DNA's Solution</h3>
+                    <div class="space-y-8">
+                        <div class="flex items-start bg-navy-blue p-6 rounded-lg shadow-lg">
+                            <svg class="w-8 h-8 text-accent-blue mr-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.008 12.008 0 002 12c0 2.296.83 4.49 2.382 6.34A12.001 12.001 0 0012 21c4.478 0 8.268-2.94 9.57-7.06-.576-2.583-2.837-4.757-5.405-5.908z"></path></svg>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white mb-2">End-to-End Visibility</h4>
+                                <p class="text-dark-gray">Provides immutable, real-time tracking of every component from origin to final product.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-navy-blue p-6 rounded-lg shadow-lg">
+                            <svg class="w-8 h-8 text-accent-blue mr-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.008 12.008 0 002 12c0 2.296.83 4.49 2.382 6.34A12.001 12.001 0 0012 21c4.478 0 8.268-2.94 9.57-7.06-.576-2.583-2.837-4.757-5.405-5.908z"></path></svg>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white mb-2">Authenticity Guaranteed</h4>
+                                <p class="text-dark-gray">Blockchain's immutability ensures all data points are tamper-proof and verifiable.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-navy-blue p-6 rounded-lg shadow-lg">
+                            <svg class="w-8 h-8 text-accent-blue mr-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.008 12.008 0 002 12c0 2.296.83 4.49 2.382 6.34A12.001 12.001 0 0012 21c4.478 0 8.268-2.94 9.57-7.06-.576-2.583-2.837-4.757-5.405-5.908z"></path></svg>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white mb-2">Precision Recalls</h4>
+                                <p class="text-dark-gray">Pinpoint affected components, enabling highly targeted and efficient recalls.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Used Section -->
+    <section id="technologies" class="py-20 px-4 sm:px-6 lg:px-8 bg-navy-blue">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-bold text-white text-center mb-16">Technologies Used</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Blockchain -->
+                <div class="group relative flex flex-col items-center p-8 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                    <svg class="w-16 h-16 text-accent-blue mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    <h3 class="text-xl font-semibold text-white mb-2">Blockchain</h3>
+                    <p class="text-dark-gray text-center text-sm">Immutable ledger for secure, transparent data.</p>
+                    <div class="absolute inset-0 flex items-center justify-center bg-accent-blue bg-opacity-90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-navy-blue text-center p-4 font-medium">Ensures data integrity and prevents tampering across the supply chain.</p>
+                    </div>
+                </div>
+
+                <!-- IoT Sensors -->
+                <div class="group relative flex flex-col items-center p-8 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                    <svg class="w-16 h-16 text-accent-blue mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    <h3 class="text-xl font-semibold text-white mb-2">IoT Sensors</h3>
+                    <p class="text-dark-gray text-center text-sm">Real-time data capture from components.</p>
+                    <div class="absolute inset-0 flex items-center justify-center bg-accent-blue bg-opacity-90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-navy-blue text-center p-4 font-medium">Collects environmental data (temp, humidity) and location during transit.</p>
+                    </div>
+                </div>
+
+                <!-- AI/ML -->
+                <div class="group relative flex flex-col items-center p-8 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                    <svg class="w-16 h-16 text-accent-blue mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 10V7m5 3V7m5 3V7m5 3V7M3 14V9m5 5V9m5 5V9m5 5V9m-9 9V14m5 5V14"></path></svg>
+                    <h3 class="text-xl font-semibold text-white mb-2">AI/ML</h3>
+                    <p class="text-dark-gray text-center text-sm">Data analysis, anomaly detection, predictions.</p>
+                    <div class="absolute inset-0 flex items-center justify-center bg-accent-blue bg-opacity-90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-navy-blue text-center p-4 font-medium">Identifies anomalies, predicts potential issues, and optimizes supply chain routes.</p>
+                    </div>
+                </div>
+
+                <!-- QR/NFC Tagging -->
+                <div class="group relative flex flex-col items-center p-8 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                    <svg class="w-16 h-16 text-accent-blue mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <h3 class="text-xl font-semibold text-white mb-2">QR/NFC Tagging</h3>
+                    <p class="text-dark-gray text-center text-sm">Unique identifiers for each component.</p>
+                    <div class="absolute inset-0 flex items-center justify-center bg-accent-blue bg-opacity-90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-navy-blue text-center p-4 font-medium">Provides a simple, scannable link between physical components and digital twins on the blockchain.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works – Simplified Workflow -->
+    <section id="how-it-works" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-bold text-white text-center mb-16">How It Works – Simplified Workflow</h2>
+
+            <div class="relative flex flex-col items-center md:flex-row md:justify-between space-y-12 md:space-y-0 md:space-x-8">
+                <!-- Line connecting steps -->
+                <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-accent-blue transform -translate-y-1/2 mx-20"></div>
+                <div class="md:hidden absolute left-1/2 top-0 bottom-0 w-1 bg-accent-blue transform -translate-x-1/2 my-20"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 flex flex-col items-center text-center p-6 bg-navy-blue rounded-lg shadow-lg md:w-1/5 group">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-accent-blue text-navy-blue text-3xl font-bold mb-4">1</div>
+                    <svg class="w-12 h-12 text-white mb-2 group-hover:text-accent-blue transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2zm0 6h.01M7 11h.01M7 15h.01M17 12H9"></path></svg>
+                    <h3 class="text-xl font-semibold text-white mb-2">Component Tagged</h3>
+                    <p class="text-dark-gray text-sm">Each component receives a unique QR/NFC tag.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 flex flex-col items-center text-center p-6 bg-navy-blue rounded-lg shadow-lg md:w-1/5 group">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-accent-blue text-navy-blue text-3xl font-bold mb-4">2</div>
+                    <svg class="w-12 h-12 text-white mb-2 group-hover:text-accent-blue transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3 class="text-xl font-semibold text-white mb-2">Sensor Data Recorded</h3>
+                    <p class="text-dark-gray text-sm">IoT sensors collect real-time data during transit.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 flex flex-col items-center text-center p-6 bg-navy-blue rounded-lg shadow-lg md:w-1/5 group">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-accent-blue text-navy-blue text-3xl font-bold mb-4">3</div>
+                    <svg class="w-12 h-12 text-white mb-2 group-hover:text-accent-blue transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    <h3 class="text-xl font-semibold text-white mb-2">Product Assembled</h3>
+                    <p class="text-dark-gray text-sm">Components are assembled; a unique "DNA" is formed.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 flex flex-col items-center text-center p-6 bg-navy-blue rounded-lg shadow-lg md:w-1/5 group">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-accent-blue text-navy-blue text-3xl font-bold mb-4">4</div>
+                    <svg class="w-12 h-12 text-white mb-2 group-hover:text-accent-blue transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <h3 class="text-xl font-semibold text-white mb-2">Data to Blockchain</h3>
+                    <p class="text-dark-gray text-sm">Lineage data and sensor logs are written to the blockchain.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="relative z-10 flex flex-col items-center text-center p-6 bg-navy-blue rounded-lg shadow-lg md:w-1/5 group">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-accent-blue text-navy-blue text-3xl font-bold mb-4">5</div>
+                    <svg class="w-12 h-12 text-white mb-2 group-hover:text-accent-blue transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.394 1.286a.237.237 0 00-.322.016L5.8 2.97a.124.124 0 01-.013-.183l1.28-1.037a.237.237 0 00.01-.322z"></path></svg>
+                    <h3 class="text-xl font-semibold text-white mb-2">Product Scanned</h3>
+                    <p class="text-dark-gray text-sm">Scan product to instantly retrieve its full lineage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 px-4 sm:px-6 lg:px-8 bg-navy-blue">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-bold text-white text-center mb-16">Benefits</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Before Supply DNA -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <h3 class="text-4xl font-semibold text-white mb-8 text-center md:text-left">Before Supply DNA</h3>
+                    <ul class="space-y-6 text-dark-gray text-lg">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Limited Visibility & Traceability
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            High Risk of Counterfeits
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Slow & Costly Recalls
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Difficulty in ESG Compliance
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Brand Reputation Damage
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- After Supply DNA -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <h3 class="text-4xl font-semibold text-white mb-8 text-center md:text-left">After Supply DNA</h3>
+                    <ul class="space-y-6 text-light-gray text-lg">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Complete Component-Level Traceability
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Guaranteed Authenticity & Security
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Rapid & Targeted Product Recalls
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Streamlined ESG Reporting & Compliance
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Enhanced Brand Trust & Reputation
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Links Section -->
+    <section id="resources" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-5xl font-bold text-white mb-16">Resources</h2>
+
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+                <a href="/assets/SupplyDNA-Proposal.pdf" download class="inline-block bg-navy-blue border border-accent-blue text-accent-blue font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-accent-blue hover:text-navy-blue transition duration-300 transform hover:scale-105">
+                    Full Proposal PDF
+                </a>
+                <a href="/assets/SupplyDNA-Poster.png" download class="inline-block bg-navy-blue border border-accent-blue text-accent-blue font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-accent-blue hover:text-navy-blue transition duration-300 transform hover:scale-105">
+                    Project Poster (PNG)
+                </a>
+                <a href="https://github.com/your-repo/supply-dna" target="_blank" rel="noopener noreferrer" class="inline-block bg-navy-blue border border-accent-blue text-accent-blue font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-accent-blue hover:text-navy-blue transition duration-300 transform hover:scale-105">
+                    GitHub Repository
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-blue py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0">
+            <div class="text-dark-gray">
+                <p>&copy; 2025 Supply DNA Project. All rights reserved.</p>
+                <p>Contact: John Doe (<a href="mailto:john.doe@example.com" class="text-accent-blue hover:underline">john.doe@example.com</a>)</p>
+                <p>Jane Smith (<a href="mailto:jane.smith@example.com" class="text-accent-blue hover:underline">jane.smith@example.com</a>)</p>
+                <p class="mt-4">This is a concept demo for the Blockchain Innovation Contest – 2025.</p>
+            </div>
+            <!-- Placeholder Team/Institution Logo -->
+            <div class="text-white text-3xl font-bold">
+                <svg class="mx-auto md:ml-auto w-16 h-16 text-accent-blue" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.31L18.6 7 12 9.69 5.4 7 12 4.31zM4 9l8 4 8-4v6l-8 4-8-4V9zm11.36 1.83L12 13.04l-3.36-1.21L6 14.16l6 2.16 6-2.16-3.36-1.21z"/>
+                </svg>
+                <span class="block text-sm text-dark-gray mt-2">Innovation Team</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

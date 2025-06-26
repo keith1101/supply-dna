@@ -1,0 +1,20 @@
+/* Custom colors for Tailwind */
+:root {
+    --color-navy-blue: #0A192F; /* Dark background */
+    --color-light-gray: #CCD6F6; /* Text color */
+    --color-white: #FFFFFF;
+    --color-accent-blue: #64FFDA; /* Accent color, often used in tech sites */
+    --color-dark-gray: #8892B0; /* Secondary text */
+}
+.bg-navy-blue { background-color: var(--color-navy-blue); }
+.text-light-gray { color: var(--color-light-gray); }
+.text-dark-gray { color: var(--color-dark-gray); }
+.text-accent-blue { color: var(--color-accent-blue); }
+.border-accent-blue { border-color: var(--color-accent-blue); }
+.hover\:bg-accent-blue:hover { background-color: var(--color-accent-blue); }
+.hover\:text-navy-blue:hover { color: var(--color-navy-blue); }
+
+/* Custom scroll behavior for anchor links */
+html {
+    scroll-behavior: smooth;
+}
