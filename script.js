@@ -75,6 +75,19 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
+    /* Active nav link on scroll */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.main-nav a');
+
+    function activateNavLink(){
+        let index = sections.length;
+        while(--index && window.scrollY + 90 < sections[index].offsetTop){}
+        navLinks.forEach(link => link.classList.remove('active'));
+        if(navLinks[index]) navLinks[index].classList.add('active');
+    }
+    activateNavLink();
+    window.addEventListener('scroll', activateNavLink);
+
     /* Refresh triggers on full load (fonts/icons) */
     window.addEventListener('load', () => ScrollTrigger.refresh());
 });
