@@ -132,7 +132,7 @@ body{
 .tech-card h4{font-size:1.1rem;font-weight:600;}
 
 /* CTA */
-.cta-section{background:linear-gradient(rgba(13,17,23,.9),rgba(13,17,23,.9)),url('/assets/bg-grid.svg') center/contain no-repeat;}
+.cta-section{background:linear-gradient(rgba(13,17,23,.9),rgba(13,17,23,.9)),url('assets/bg-grid.svg') center/contain no-repeat;}
 .cta-buttons{margin-top:2rem;display:flex;justify-content:center;flex-wrap:wrap;gap:1.5rem;}
 
 /* Footer */
